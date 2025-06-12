@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tema claro */
+:root {
+  --background: #f3f0ec;
+  --foreground: #020202;
+
+  --primary: #005854;
+  --primary-foreground: #ffffff;
+
+  --secondary: #6fb08f;
+  --secondary-foreground: #1e3a1c;
+
+  --muted: #e6f5e9;
+  --muted-foreground: #3b593c;
+
+  --border: #d0e7d5;
+  --input: #eaf4ed;
+}
+
+/* Tema oscuro */
+.dark {
+  --background: #121e14;
+  --foreground: #f1fdf5;
+
+  --primary: #81c784;
+  --primary-foreground: #0e1a0f;
+
+  --secondary: #4caf50;
+  --secondary-foreground: #ffffff;
+
+  --muted: #1b2b1c;
+  --muted-foreground: #a8e6aa;
+
+  --border: #3d5140;
+  --input: #2a4030;
+}
