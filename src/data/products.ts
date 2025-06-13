@@ -18,7 +18,7 @@ export const products: Product[] = [
     name: "GINKGO BILOBA EXTRACT",
     category: "Essential Oils",
     price: 18000,
-    image: "/public/img/17.jpg",
+    image: "/img/17.jpg",
     rating: 4.8,
     reviewCount: 124,
     isNew: false,
