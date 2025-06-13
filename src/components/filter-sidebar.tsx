@@ -13,16 +13,14 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ isOpen, onClose })
   const [selectedRating, setSelectedRating] = React.useState<string>("0");
   
   const categories = [
-    "Essential Oils",
-    "Tinctures",
-    "Herbal Teas",
-    "Salves",
-    "Bath & Body",
-    "Aromatherapy"
+    "Acietes",
+    "Unguentos",
+    "Jarabes",
+    "Destilados",
   ];
   
   const handleReset = () => {
-    setPriceRange([10, 100]);
+    setPriceRange([10000, 100000]);
     setSelectedCategories([]);
     setSelectedRating("0");
   };
@@ -43,7 +41,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ isOpen, onClose })
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-lg font-semibold">Filters</h2>
+            <h2 className="text-lg font-semibold">Filtros</h2>
             <Button isIconOnly size="sm" variant="light" onPress={onClose}>
               <Icon icon="lucide:x" className="text-lg" />
             </Button>
@@ -85,7 +83,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ isOpen, onClose })
     return (
       <div className="space-y-8">
         <div>
-          <h3 className="font-medium mb-3">Categories</h3>
+          <h3 className="font-medium mb-3">Categorias</h3>
           <CheckboxGroup
             value={selectedCategories}
             onValueChange={setSelectedCategories}
@@ -99,12 +97,12 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ isOpen, onClose })
         </div>
         
         <div>
-          <h3 className="font-medium mb-3">Price Range</h3>
+          <h3 className="font-medium mb-3">Rango de Precio</h3>
           <Slider
             label="Price"
             step={1}
             minValue={0}
-            maxValue={200}
+            maxValue={200000}
             value={priceRange}
             onChange={setPriceRange as any}
             formatOptions={{ style: "currency", currency: "USD" }}
@@ -113,7 +111,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ isOpen, onClose })
         </div>
         
         <div>
-          <h3 className="font-medium mb-3">Rating</h3>
+          <h3 className="font-medium mb-3">Calificacion</h3>
           <RadioGroup value={selectedRating} onValueChange={setSelectedRating}>
             {[4, 3, 2, 1].map((rating) => (
               <Radio key={rating} value={rating.toString()}>
@@ -133,13 +131,13 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ isOpen, onClose })
         </div>
         
         <div>
-          <h3 className="font-medium mb-3">Product Type</h3>
+          <h3 className="font-medium mb-3">Tipo de Productos</h3>
           <CheckboxGroup defaultValue={["all"]}>
-            <Checkbox value="all">All Products</Checkbox>
-            <Checkbox value="organic">Organic</Checkbox>
-            <Checkbox value="vegan">Vegan</Checkbox>
-            <Checkbox value="cruelty-free">Cruelty Free</Checkbox>
-            <Checkbox value="handmade">Handmade</Checkbox>
+            <Checkbox value="all">Todos los Productos</Checkbox>
+            <Checkbox value="organic">Organico</Checkbox>
+            <Checkbox value="vegan">Vegano</Checkbox>
+            <Checkbox value="cruelty-free">Libre de crueldad Animal</Checkbox>
+            <Checkbox value="handmade">Artesanal</Checkbox>
           </CheckboxGroup>
         </div>
       </div>
