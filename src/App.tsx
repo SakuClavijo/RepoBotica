@@ -6,6 +6,7 @@ import { FilterSidebar } from "./components/filter-sidebar";
 import { LandingPage } from "./components/landing-page";
 import { ChatBot } from "./components/chat-bot";
 import { AboutUs } from "./components/about-us";
+import { Blog } from "./components/blogpage";
 
 export default function App() {
   const [isFilterOpen, setIsFilterOpen] = React.useState(false);
@@ -14,7 +15,7 @@ export default function App() {
   const [isChatOpen, setIsChatOpen] = React.useState(false);
 
   return (
-    <div className="max-h-screen bg-background">
+     <div className="max-h-screen bg-background">
       <Navbar maxWidth="xl" isBordered>
         <NavbarBrand>
            <img
@@ -55,6 +56,15 @@ export default function App() {
               onPress={() => setCurrentPage("about")}
             >
               About Us
+            </Link>
+          </NavbarItem>
+          <NavbarItem isActive={currentPage === "blog"}>
+            <Link 
+              color={currentPage === "blog" ? "primary" : "foreground"} 
+              href="#"
+              onPress={() => setCurrentPage("blog")}
+            >
+              Blog
             </Link>
           </NavbarItem>
         </NavbarContent>
@@ -115,6 +125,8 @@ export default function App() {
           <LandingPage onShopNow={() => setCurrentPage("shop")} />
         ) : currentPage === "about" ? (
           <AboutUs />
+        ) : currentPage === "blog" ? (
+          <Blog />
         ) : (
           <>
             <div className="flex flex-col mb-8">
@@ -189,16 +201,24 @@ export default function App() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Boticario</h3>
               <p className="text-default-500 text-sm">Productos de botica artesanales para el bienestar y la curación desde 2025.</p>
-              <div className="flex gap-4 mt-4">
-                <Button isIconOnly variant="flat" size="sm" aria-label="Instagram">
-                  <Icon icon="lucide:instagram" />
-                </Button>
-                <Button isIconOnly variant="flat" size="sm" aria-label="Facebook">
-                  <Icon icon="lucide:facebook" />
-                </Button>
-                <Button isIconOnly variant="flat" size="sm" aria-label="Twitter">
-                  <Icon icon="lucide:twitter" />
-                </Button>
+              <div className="flex gap-6 mt-6">
+                <a href="https://www.instagram.com/el_abue_russell?igsh=MTZoZTZhdGZzMDRlMA==" target="_blank" rel="noopener noreferrer">
+                  <Button isIconOnly variant="flat" size="sm" aria-label="Instagram">
+                    <Icon icon="lucide:instagram" />
+                  </Button>
+                </a>
+
+                <a href="https://www.facebook.com/share/1WTMFA22qv/" target="_blank" rel="noopener noreferrer">
+                  <Button isIconOnly variant="flat" size="sm" aria-label="Facebook">
+                    <Icon icon="lucide:facebook" />
+                  </Button>
+                </a>
+
+                <a href="https://wa.link/nudccx" target="_blank" rel="noopener noreferrer">
+                  <Button isIconOnly variant="flat" size="sm" aria-label="Twitter">
+                    <Icon icon="hugeicons:whatsapp" />
+                  </Button>
+                </a>
               </div>
             </div>
             

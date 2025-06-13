@@ -8,7 +8,7 @@ interface FilterSidebarProps {
 }
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ isOpen, onClose }) => {
-  const [priceRange, setPriceRange] = React.useState([10, 100]);
+  const [priceRange, setPriceRange] = React.useState([1000, 100000]);
   const [selectedCategories, setSelectedCategories] = React.useState<string[]>([]);
   const [selectedRating, setSelectedRating] = React.useState<string>("0");
   
@@ -51,7 +51,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ isOpen, onClose })
           
           <div className="flex gap-3 mt-8">
             <Button color="primary" className="flex-1" onPress={onClose}>
-              Apply Filters
+              Aplicar Filtros
             </Button>
             <Button variant="flat" onPress={handleReset}>
               Reset
@@ -63,7 +63,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ isOpen, onClose })
       {/* Desktop filter sidebar */}
       <div className="hidden md:block w-64 flex-shrink-0">
         <div className="sticky top-20">
-          <h2 className="text-lg font-semibold mb-6">Filters</h2>
+          <h2 className="text-lg font-semibold mb-6">Filtros</h2>
           {renderFilterContent()}
           <Button 
             variant="light" 
@@ -99,7 +99,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ isOpen, onClose })
         <div>
           <h3 className="font-medium mb-3">Rango de Precio</h3>
           <Slider
-            label="Price"
+            label="Precio"
             step={1}
             minValue={0}
             maxValue={200000}
@@ -123,7 +123,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ isOpen, onClose })
                       className={`text-xs ${i < rating ? "text-warning" : "text-default-300"}`}
                     />
                   ))}
-                  <span className="ml-2">& Up</span>
+                  <span className="ml-2">& Mas</span>
                 </div>
               </Radio>
             ))}

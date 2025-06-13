@@ -23,8 +23,8 @@ interface QuickReply {
 export const ChatBot: React.FC<ChatBotProps> = ({ isOpen, onClose }) => {
   const [messages, setMessages] = React.useState<Message[]>([
     {
-      id: "welcome",
-      text: "👋 Hello! I'm Herbie, your wellness assistant. How can I help you today?",
+      id: "Bienvenido",
+      text: "👋 ¡Hola! Soy Herbie, tu asistente de bienestar. ¿En qué puedo ayudarte hoy?",
       sender: "bot",
       timestamp: new Date(),
     },
@@ -34,10 +34,10 @@ export const ChatBot: React.FC<ChatBotProps> = ({ isOpen, onClose }) => {
   const messagesEndRef = React.useRef<HTMLDivElement>(null);
   
   const quickReplies: QuickReply[] = [
-    { id: "products", text: "Product recommendations" },
-    { id: "ingredients", text: "Ingredient information" },
-    { id: "shipping", text: "Shipping & Returns" },
-    { id: "help", text: "Help with an order" },
+    { id: "products", text: "Recomendaciones de productos" },
+    { id: "ingredients", text: "Información sobre los ingredientes" },
+    { id: "shipping", text: "Envíos y devoluciones" },
+    { id: "help", text: "Ayuda con un pedido" },
   ];
 
   // Scroll to bottom when messages change
@@ -81,24 +81,24 @@ export const ChatBot: React.FC<ChatBotProps> = ({ isOpen, onClose }) => {
     let responseText = "";
     
     // Simple response logic based on keywords
-    if (lowerText.includes("product") || lowerText.includes("recommend")) {
-      responseText = "I'd be happy to recommend some products! What are you looking for? We have essential oils, tinctures, herbal teas, salves, and bath products.";
-    } else if (lowerText.includes("essential oil")) {
-      responseText = "Our essential oils are 100% pure and therapeutic grade. Our most popular ones are Lavender, Tea Tree, and Eucalyptus. Would you like to know more about any of these?";
-    } else if (lowerText.includes("shipping") || lowerText.includes("delivery")) {
-      responseText = "We offer free shipping on orders over $50. Standard shipping takes 3-5 business days, and express shipping is available for an additional fee.";
-    } else if (lowerText.includes("return") || lowerText.includes("refund")) {
-      responseText = "We have a 30-day satisfaction guarantee. If you're not happy with your purchase, you can return it for a full refund within 30 days.";
-    } else if (lowerText.includes("ingredient") || lowerText.includes("organic")) {
-      responseText = "All our products are made with organic ingredients sourced from trusted suppliers. We never use artificial preservatives, colors, or fragrances.";
-    } else if (lowerText.includes("help") || lowerText.includes("order")) {
-      responseText = "I'd be happy to help with your order! Please provide your order number, and I'll check the status for you.";
-    } else if (lowerText.includes("hello") || lowerText.includes("hi") || lowerText.includes("hey")) {
-      responseText = "Hello there! How can I assist you with our apothecary products today?";
-    } else if (lowerText.includes("thank")) {
-      responseText = "You're very welcome! Is there anything else I can help you with?";
+    if (lowerText.includes("productos") || lowerText.includes("recommend")) {
+      responseText = "Estaré encantada de recomendarte algunos productos. ¿Qué buscas? Tenemos aceites esenciales, tinturas, infusiones, bálsamos y productos para el baño.";
+    } else if (lowerText.includes("aseites")) {
+      responseText = "Nuestros aceites esenciales son 100% puros y de grado terapéutico. Los más populares son los de lavanda, árbol del té y eucalipto. Quieres saber más sobre alguno de ellos?";
+    } else if (lowerText.includes("compras") || lowerText.includes("delivery")) {
+      responseText = "Ofrecemos envío gratuito en pedidos superiores a 50 dólares. El envío estándar tarda entre 3 y 5 días laborables, y el envío exprés está disponible por un cargo adicional.";
+    } else if (lowerText.includes("devoluciones") || lowerText.includes("refund")) {
+      responseText = "Tenemos una garantía de satisfacción de 30 días. Si no estás satisfecho con tu compra, puedes devolverla y obtener un reembolso completo en un plazo de 30 días.";
+    } else if (lowerText.includes("ingredientes") || lowerText.includes("organic")) {
+      responseText = "Todos nuestros productos se elaboran con ingredientes ecológicos procedentes de proveedores de confianza. Nunca utilizamos conservantes, colorantes ni fragancias artificiales.";
+    } else if (lowerText.includes("ayuda") || lowerText.includes("order")) {
+      responseText = "Estaré encantada de ayudarle con su pedido. Indíqueme su número de pedido y comprobaré el estado por usted.";
+    } else if (lowerText.includes("hola") || lowerText.includes("hi") || lowerText.includes("hey")) {
+      responseText = "¡Hola! ¿En qué puedo ayudarle hoy con nuestros productos de botica?";
+    } else if (lowerText.includes("graci")) {
+      responseText = "De nada. ¿Puedo ayudarle en algo más?";
     } else {
-      responseText = "I'm not sure I understand. Could you rephrase your question? Or you can ask about our products, shipping, or ingredients.";
+      responseText = "No estoy seguro de entender. ¿Podría formular su pregunta de otro modo? O puede preguntar sobre nuestros productos, envíos o ingredientes.";
     }
     
     return {
@@ -133,7 +133,7 @@ export const ChatBot: React.FC<ChatBotProps> = ({ isOpen, onClose }) => {
                 />
                 <div>
                   <p className="font-medium text-small">Herbie</p>
-                  <p className="text-tiny opacity-80">Wellness Assistant</p>
+                  <p className="text-tiny opacity-80">Asistente Boticario</p>
                 </div>
               </div>
               <Button

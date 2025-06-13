@@ -84,53 +84,52 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onShopNow }) => {
         </div>
       </section>
 
-      {/* Featured Categories */}
-      <section>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Nuestra Categoria de productos</h2>
-          <p className="text-default-600 max-w-2xl mx-auto">
-            Explora nuestras categorías destacadas y encuentra el remedio perfecto para ti
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category, index) => (
-            <motion.div
-              key={category.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card 
-                isPressable
-                onPress={onShopNow}
-                className="overflow-hidden h-[280px] border border-divider"
-              >
-                <CardBody className="p-0 overflow-hidden">
-                  <div className="relative h-full">
-                    <Image
-                      removeWrapper
-                      alt={category.name}
-                      className="w-full h-full object-cover"
-                      src={category.image}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-                      <div className="text-white">
-                        <h3 className="text-xl font-semibold mb-1">{category.name}</h3>
-                        <p className="text-white/80 text-sm mb-3">{category.description}</p>
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm font-medium">Explore</span>
-                          <Icon icon="lucide:arrow-right" className="text-sm" />
-                        </div>
-                      </div>
-                    </div>
+ <section>
+  <div className="text-center mb-12">
+    <h2 className="text-3xl font-bold mb-4">Nuestra Categoria de productos</h2>
+    <p className="text-default-600 max-w-2xl mx-auto">
+      Explora nuestras categorías destacadas y encuentra la medicina perfecta para ti, adicionalmente si Scaneas el QR accederas a la realidad aumentada de nuestros productos
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+    {categories.map((category, index) => (
+      <motion.div
+        key={category.name}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+      >
+        <Card 
+            isPressable
+            onPress={onShopNow}
+            className="overflow-hidden border border-divider h-auto w-80"
+          >
+          <CardBody className="p-0 overflow-hidden">
+            <div className="relative h-full">
+              <Image
+                removeWrapper
+                alt={category.name}
+                className="w-full h-full object-cover"
+                src={category.image}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                <div className="text-white">
+                  <h3 className="text-xl font-semibold mb-1">{category.name}</h3>
+                  <p className="text-white/80 text-sm mb-3">{category.description}</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium">Explore</span>
+                    <Icon icon="lucide:arrow-right" className="text-sm" />
                   </div>
-                </CardBody>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+                </div>
+              </div>
+            </div>
+          </CardBody>
+        </Card>
+      </motion.div>
+    ))}
+  </div>
+</section>
 
       {/* Best Sellers */}
       <section>
@@ -149,7 +148,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onShopNow }) => {
           </Button>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {bestSellers.map((product, index) => (
             <motion.div
               key={product.id}
@@ -255,7 +254,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onShopNow }) => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -327,22 +326,22 @@ const categories = [
   {
     name: "Essential Oils",
     description: "Pure, therapeutic-grade oils for aromatherapy",
-    image: "/img/17.jpg"
+    image: "/img/QR2.png"
   },
+  // {
+  //   name: "Herbal Teas",
+  //   description: "Organic blends for wellness and relaxation",
+  //   image: "/img/18.jpg"
+  // },
+  // {
+  //   name: "Bath & Body",
+  //   description: "Natural products for skin and self-care",
+  //   image: "/img/19.jpg"
+  // },
   {
-    name: "Herbal Teas",
+    name: "Producto",
     description: "Organic blends for wellness and relaxation",
-    image: "/img/18.jpg"
-  },
-  {
-    name: "Bath & Body",
-    description: "Natural products for skin and self-care",
-    image: "/img/19.jpg"
-  },
-  {
-    name: "Teas",
-    description: "Organic blends for wellness and relaxation",
-    image: "/img/25.jpg"
+    image: "/img/QR1.png"
   }
 
 ];
