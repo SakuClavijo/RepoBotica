@@ -66,7 +66,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onShopNow }) => {
               <Image
                 alt="Apothecary hero"
                 className="object-cover rounded-xl w-full max-w-xl mx-auto"
-                src="/public/img/Boticalanding.jpeg"
+                src="/img/Boticalanding.jpeg"
               />
               <div className="absolute -bottom-6 -right-6 bg-content1 p-4 rounded-lg shadow-lg border border-divider hidden md:block">
                 <div className="flex items-center gap-3">
@@ -240,7 +240,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onShopNow }) => {
             <Image
               alt="Apothecary process"
               className="rounded-xl w-full"
-              src="/public/img/BOTICACAFE.jpg"
+              src="/img/BOTICACAFE.jpg"
             />
           </motion.div>
         </div>
@@ -327,22 +327,22 @@ const categories = [
   {
     name: "Essential Oils",
     description: "Pure, therapeutic-grade oils for aromatherapy",
-    image: "/public/img/17.jpg"
+    image: "/img/17.jpg"
   },
   {
     name: "Herbal Teas",
     description: "Organic blends for wellness and relaxation",
-    image: "/public/img/18.jpg"
+    image: "/img/18.jpg"
   },
   {
     name: "Bath & Body",
     description: "Natural products for skin and self-care",
-    image: "/public/img/19.jpg"
+    image: "/img/19.jpg"
   },
   {
     name: "Teas",
     description: "Organic blends for wellness and relaxation",
-    image: "/public/img/25.jpg"
+    image: "/img/25.jpg"
   }
 
 ];
@@ -353,7 +353,7 @@ const bestSellers = [
     name: "Lavender Essential Oil",
     category: "Essential Oils",
     price: 18099,
-    image: "/public/img/20.jpg",
+    image: "/img/20.jpg",
     badge: "Best Seller"
   },
   {
@@ -362,14 +362,14 @@ const bestSellers = [
     category: "Tinctures",
     price: 24099,
     originalPrice: 29099,
-    image: "/public/img/21.jpg"
+    image: "/img/21.jpg"
   },
   {
     id: "bs3",
     name: "Eucalyptus Bath Salts",
     category: "Bath & Body",
     price: 12099,
-    image: "/public/img/22.jpg",
+    image: "/img/22.jpg",
     badge: "New"
   },
   {
@@ -378,7 +378,7 @@ const bestSellers = [
     category: "Tinctures",
     price: 24099,
     originalPrice: 29099,
-    image: "/public/img/23.jpg"
+    image: "/img/23.jpg"
   }
 ];
 

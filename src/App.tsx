@@ -18,7 +18,7 @@ export default function App() {
       <Navbar maxWidth="xl" isBordered>
         <NavbarBrand>
            <img
-                src="/src/img/LOGO BOTICA ABUELO RUSSELL.svg"
+                src="/img/logo.svg"
                 alt="Logo La Botica del Abuelo Russell"
                 className="w-100 h-auto sm:w-24 md:w-28"
             />

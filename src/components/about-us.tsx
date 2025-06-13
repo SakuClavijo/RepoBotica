@@ -31,7 +31,7 @@ export const AboutUs: React.FC = () => {
             <Image
               alt="About Us Hero"
               className="object-cover rounded-xl w-full max-w-xl mx-auto"
-              src="/src/img/Abuelorusell.jpeg"
+              src="/img/Abuelorusell.jpeg"
             />
           </motion.div>
         </div>
@@ -219,26 +219,6 @@ const values = [
   }
 ];
 
-const team = [
-  {
-    name: "Elena Rodriguez",
-    role: "Founder & Herbalist",
-    image: "https://img.heroui.chat/image/avatar?w=200&h=200&u=team1",
-    bio: "With over 20 years of experience in herbal medicine, Elena founded La Botica to share her passion for natural healing."
-  },
-  {
-    name: "David Chen",
-    role: "Product Formulator",
-    image: "https://img.heroui.chat/image/avatar?w=200&h=200&u=team2",
-    bio: "David combines traditional wisdom with modern science to create our innovative product formulations."
-  },
-  {
-    name: "Sarah Thompson",
-    role: "Sustainability Director",
-    image: "https://img.heroui.chat/image/avatar?w=200&h=200&u=team3",
-    bio: "Sarah ensures that our practices and partnerships align with our commitment to environmental stewardship."
-  }
-];
 
 const process = [
   {
