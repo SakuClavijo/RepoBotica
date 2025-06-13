@@ -1,9 +1,19 @@
 import React from "react";
-import { Image, Card, CardBody } from "@heroui/react";
+import { Image, Card, CardBody, Button, } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 
 export const AboutUs: React.FC = () => {
+  const handleDownload = () => {
+    // Replace with actual file URL
+    const fileUrl = 'https://docs.google.com/document/d/111IwOiBrtfY866Bjb5OTHvJ1EEgWg7ul/edit?usp=sharing&ouid=114227310314126218122&rtpof=true&sd=true';
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'La_Botica_Price_List.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -197,9 +207,26 @@ export const AboutUs: React.FC = () => {
           ))}
         </div>
       </section>
-    </div>
+      {/* Our Download Section */}
+      <section className="bg-content3 rounded-xl p-8">
+        <h2 className="text-2xl font-semibold mb-4">
+          Descarga lo más importante de nostros
+        </h2>
+        <p className="text-default-600 mb-4">
+          Aqui puedes descargar el documento realcionado con nuestros valores, misión y visión.
+        </p>
+        <Button
+          color="primary"
+          endContent={<Icon icon="lucide:download" />}
+          onPress={handleDownload}
+        >
+          Descargar
+        </Button>
+      </section>
+      </div>
   );
 };
+
 
 const values = [
   {

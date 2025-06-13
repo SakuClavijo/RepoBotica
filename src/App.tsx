@@ -42,12 +42,7 @@ export default function App() {
               onPress={() => setCurrentPage("shop")}
             >
               Shop
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link color="foreground" href="#">
-              Collections
-            </Link>
+           </Link>
           </NavbarItem>
           <NavbarItem isActive={currentPage === "about"}>
             <Link 
@@ -94,7 +89,7 @@ export default function App() {
             >
               <div className="relative">
                 <Icon icon="lucide:shopping-bag" className="text-default-500 text-xl" />
-                <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-white">3</span>
+                {/* <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-white"></span> */}
               </div>
             </Button>
           </NavbarItem>
@@ -259,7 +254,7 @@ export default function App() {
           </div>
           
           <div className="border-t border-divider mt-10 pt-6 text-center text-default-500 text-sm">
-            © {new Date().getFullYear()} By Paola Romero.
+            © {new Date().getFullYear()} By CIPA N° 8 DESCONECTADOS - CONECTADOS Paola Romero Reyes Manuel Ricardo Vargas Javier Andres Vargas.
           </div>
         </div>
       </footer>

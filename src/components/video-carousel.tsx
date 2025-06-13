@@ -12,10 +12,11 @@ export const VideoCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   const videos: Video[] = [
-    { id: "7D62AAv614A", title: "Natural Remedies for Better Sleep" },
-    { id: "d_f2Ab14c38", title: "The Power of Essential Oils" },
-    { id: "ntkmgNm0N-8", title: "Herbal Tea Blending Workshop" },
-    { id: "_ZoQ8cRFsFE", title: "DIY Aromatherapy Techniques" },
+    { id: "7D62AAv614A", title: "PODCAST DEL ABUELO RUSSEL" },
+    { id: "d_f2Ab14c38", title: "TRADICIÓN Y NATURALEZA" },
+    { id: "ntkmgNm0N-8", title: "BENEFICIOS DE LA MEDICINA NATURAL" },
+    { id: "_ZoQ8cRFsFE", title: "NATURALEZA PARA SANAR CUERPO Y ALMA" },
+    { id: "PuuAQaW8CXY", title: "HISTORIA | LA BOTICA DEL ABUELO RUSSELL" },
   ];
 
   const nextVideo = () => {
