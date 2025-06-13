@@ -66,7 +66,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onShopNow }) => {
               <Image
                 alt="Apothecary hero"
                 className="object-cover rounded-xl w-full max-w-xl mx-auto"
-                src="/src/img/Boticalanding.jpeg"
+                src="/public/img/Boticalanding.jpeg"
               />
               <div className="absolute -bottom-6 -right-6 bg-content1 p-4 rounded-lg shadow-lg border border-divider hidden md:block">
                 <div className="flex items-center gap-3">
@@ -240,7 +240,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onShopNow }) => {
             <Image
               alt="Apothecary process"
               className="rounded-xl w-full"
-              src="/src/img/BOTICACAFE.jpg"
+              src="/public/img/BOTICACAFE.jpg"
             />
           </motion.div>
         </div>
@@ -327,18 +327,24 @@ const categories = [
   {
     name: "Essential Oils",
     description: "Pure, therapeutic-grade oils for aromatherapy",
-    image: "/src/img/botica1.jpeg"
+    image: "/public/img/17.jpg"
   },
   {
     name: "Herbal Teas",
     description: "Organic blends for wellness and relaxation",
-    image: "/src/img/botica2.jpeg"
+    image: "/public/img/18.jpg"
   },
   {
     name: "Bath & Body",
     description: "Natural products for skin and self-care",
-    image: "/src/img/botica3.jpeg"
+    image: "/public/img/19.jpg"
+  },
+  {
+    name: "Teas",
+    description: "Organic blends for wellness and relaxation",
+    image: "/public/img/25.jpg"
   }
+
 ];
 
 const bestSellers = [
@@ -346,25 +352,33 @@ const bestSellers = [
     id: "bs1",
     name: "Lavender Essential Oil",
     category: "Essential Oils",
-    price: 18.99,
-    image: "/src/img/botica1.jpeg",
+    price: 18099,
+    image: "/public/img/20.jpg",
     badge: "Best Seller"
   },
   {
     id: "bs2",
     name: "Chamomile Sleep Tincture",
     category: "Tinctures",
-    price: 24.99,
-    originalPrice: 29.99,
-    image: "/src/img/botica2.jpeg"
+    price: 24099,
+    originalPrice: 29099,
+    image: "/public/img/21.jpg"
   },
   {
     id: "bs3",
     name: "Eucalyptus Bath Salts",
     category: "Bath & Body",
-    price: 12.99,
-    image: "/src/img/botica3.jpeg",
+    price: 12099,
+    image: "/public/img/22.jpg",
     badge: "New"
+  },
+  {
+    id: "bs4",
+    name: "Chamomile Sleep Tincture",
+    category: "Tinctures",
+    price: 24099,
+    originalPrice: 29099,
+    image: "/public/img/23.jpg"
   }
 ];
 
@@ -375,7 +389,7 @@ const commitments = [
     description: "Sólo obtenemos hierbas y productos botánicos orgánicos de la más alta calidad."
   },
   {
-    icon: "lucide:flask",
+    icon: "lucide:clock",
     title: "Métodos tradicionales",
     description: "Nuestros productos se elaboran con técnicas boticarias probadas a lo largo del tiempo."
   },
@@ -396,18 +410,18 @@ const testimonials = [
     name: "Maria Rodriguez",
     location: "Portland, OR",
     avatar: "https://img.heroui.chat/image/avatar?w=200&h=200&u=t1",
-    text: "The lavender essential oil has completely transformed my sleep routine. I'm falling asleep faster and waking up refreshed."
+    text: "El aceite esencial de lavanda ha transformado por completo mi rutina de sueño. Me duermo más rápido y me despierto renovada."
   },
   {
     name: "James Wilson",
     location: "Austin, TX",
     avatar: "https://img.heroui.chat/image/avatar?w=200&h=200&u=t2",
-    text: "I've tried many natural remedies for my anxiety, but the Chamomile Tincture from La Botica is by far the most effective."
+    text: "He probado muchos remedios naturales para mi ansiedad, pero la tintura de manzanilla de La Botica es, con diferencia, la más eficaz."
   },
   {
     name: "Sarah Johnson",
     location: "Seattle, WA",
     avatar: "https://img.heroui.chat/image/avatar?w=200&h=200&u=t3",
-    text: "The quality of these products is exceptional. You can really tell they're made with care and the finest ingredients."
+    text: "La calidad de estos productos es excepcional. Realmente se nota que están hechos con mimo y con los mejores ingredientes."
   }
 ];
