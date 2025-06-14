@@ -227,7 +227,7 @@ export default function App() {
               </ul>
             </div>
             
-            <div>
+            {/* <div>
               <h3 className="text-lg font-semibold mb-4">Ayuda</h3>
               <ul className="space-y-2 text-sm">
                 <li><Link href="#" color="foreground">Envios y Devoluciones</Link></li>
@@ -235,7 +235,7 @@ export default function App() {
                 <li><Link href="#" color="foreground">Contactanos</Link></li>
                 <li><Link href="#" color="foreground">Politica de Privacidad</Link></li>
               </ul>
-            </div>
+            </div> */}
             
             <div>
               <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
@@ -254,7 +254,7 @@ export default function App() {
           </div>
           
           <div className="border-t border-divider mt-10 pt-6 text-center text-default-500 text-sm">
-            © {new Date().getFullYear()} By CIPA N° 8 DESCONECTADOS - CONECTADOS Paola Romero Reyes Manuel Ricardo Vargas Javier Andres Vargas.
+            © {new Date().getFullYear()} By CIPA N° 8 DESCONECTADOS - CONECTADOS Paola Romero Reyes Manuel Ricardo Vargas Javier Andres Vargas. Contacto 3015079945 DR: Dg 151 # 145 53 Bogota
           </div>
         </div>
       </footer>
