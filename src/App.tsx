@@ -227,15 +227,12 @@ export default function App() {
               </ul>
             </div>
             
-            {/* <div>
-              <h3 className="text-lg font-semibold mb-4">Ayuda</h3>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Contactanos</h3>
               <ul className="space-y-2 text-sm">
-                <li><Link href="#" color="foreground">Envios y Devoluciones</Link></li>
-                <li><Link href="#" color="foreground">FAQ</Link></li>
-                <li><Link href="#" color="foreground">Contactanos</Link></li>
-                <li><Link href="#" color="foreground">Politica de Privacidad</Link></li>
+                <li><Link href="https://docs.google.com/forms/d/e/1FAIpQLSei5qTxLpBw9C8WqkugLa9fgeZKgUb7lVdbLFE9vemr3kpFUQ/viewform" isExternal color="foreground">Aqui</Link></li>
               </ul>
-            </div> */}
+            </div>
             
             <div>
               <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
